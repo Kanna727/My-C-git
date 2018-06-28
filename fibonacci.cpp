@@ -8,7 +8,7 @@ int main()
     std::cout << "Enter number of terms to be in fibonacci series: " << '\n';
     std::cin >> n;
 
-    std::cout << "Fibonacii series is: " << '\n';
+    std::cout << "The Fibonacii series is: " << '\n';
 
     for (size_t i = 0; i < n; i++)
     {
