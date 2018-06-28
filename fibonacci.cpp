@@ -5,7 +5,7 @@ int main()
 {
     int n, a = 0, b = 1, f = 0;
 
-    std::cout << "Enter no of terms: " << '\n';
+    std::cout << "Enter number of terms: " << '\n';
     std::cin >> n;
 
     std::cout << "Fibonacii series is: " << '\n';
