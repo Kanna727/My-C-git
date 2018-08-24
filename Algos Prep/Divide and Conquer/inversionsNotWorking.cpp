@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
+#include <chrono>
 using namespace std;
+using namespace std::chrono;
 
 unsigned long long int invCountMerge(vector<int> v, int l, int m, int r)
 {
@@ -63,7 +65,7 @@ unsigned long long int invCount(vector<int> v, int l, int r) /*                |
         invC += invCountMerge(v, l, m, r);
     }
     return invC;
-}   
+}
 
 int main()
 {
@@ -80,8 +82,12 @@ int main()
             cin >> a;
             v.push_back(a);
         }
-
+        high_resolution_clock::time_point t1 = high_resolution_clock::now();
         cout << invCount(v, 0, size - 1) << endl;
+        high_resolution_clock::time_point t2 = high_resolution_clock::now();
+        cout << endl;
+        auto duration = duration_cast<microseconds>(t2 - t1).count();
+        std::cout << "time elapsed: " << duration << endl;
     }
 
     system("pause");

@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
+#include <chrono>
 using namespace std;
+using namespace std::chrono;
 
 long long int _mergeSort(int arr[], int temp[], int left, int right);
 long long int merge(int arr[], int temp[], int left, int mid, int right);
@@ -93,7 +95,12 @@ int main(int argv, char **args)
             cin >> a;
             arr[i] = a;
         }
+        high_resolution_clock::time_point t1 = high_resolution_clock::now();
         cout << mergeSort(arr, n) << endl;
+        high_resolution_clock::time_point t2 = high_resolution_clock::now();
+        cout << endl;
+        auto duration = duration_cast<microseconds>(t2 - t1).count();
+        std::cout << "time elapsed: " << duration << endl;
     }
     return 0;
 }
