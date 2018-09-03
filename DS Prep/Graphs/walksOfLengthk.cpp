@@ -1,3 +1,7 @@
+/*
+    PROBLEM STATEMENT: Print the no of all possible walks of length k between some s and d
+*/
+
 #include <bits/stdc++.h>
 using namespace std;
 
