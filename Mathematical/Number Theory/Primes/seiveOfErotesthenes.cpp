@@ -1,4 +1,6 @@
 #include <bits/stdc++.h>
+#include <chrono>
+using namespace std::chrono;
 using namespace std;
 
 void erotesthenes(long long int n){
@@ -24,10 +26,15 @@ int main()
     std::cout << "Enter the number: ";
     cin>>n;
 
+    high_resolution_clock::time_point t1 = high_resolution_clock::now();
     erotesthenes(n);
     cout<<endl;
+    high_resolution_clock::time_point t2 = high_resolution_clock::now();
     
-    //system("pause");
+    auto duration = duration_cast<microseconds>( t2 - t1 ).count();
+    std::cout << "time elapsed: " << duration << endl;
+    
+    system("pause");
     return 0;
 }
 
